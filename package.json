@@ -1,0 +1,17 @@
+{
+    "name": "yoland-dev.github.io",
+    "version": "1.0.0",
+    "description": "A web project",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "^4.21.2",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "react-scripts": "^5.0.1"
+    },
+    "author": "Yoland Magxagxa",
+    "license": "MIT"
+}
