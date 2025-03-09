@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.main{
+.main {
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -12,21 +13,35 @@
     font-family: sans-serif;
 }
 
-.navbar{
+.navbar {
     width: 86%;
     display: flex;
     margin: auto;
     padding: 15px 0;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 }
 
-ul{
-    margin-top: -4%;
+/* Move navigation to the top right */
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-ul li{
-    list-style: none;
-    display:inline-block;
+ul {
+    display: flex;
+    gap: 20px; /* Adds space between links */
+    list-style: none; /* Removes bullet points */
+}
+
+ul li {
     padding: 10px 16px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
