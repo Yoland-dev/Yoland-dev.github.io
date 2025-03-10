@@ -170,3 +170,18 @@ html {
 a {
     display: inline-block;
 }
+/* Apply flexbox to the parent container */
+.contact-info {
+    display: flex;
+    justify-content: flex-end;  /* Aligns everything to the far right */
+    align-items: center;  /* Vertically centers the items */
+}
+
+.connect {
+    display: flex;
+    align-items: center;  /* Vertically centers the "Connect" text and the icon */
+}
+
+.connect a {
+    margin-left: 10px;  /* Adds some space between the "Connect" text and the GitHub icon */
+}
