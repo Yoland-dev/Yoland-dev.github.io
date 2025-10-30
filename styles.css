@@ -1,195 +1,279 @@
 /* Reset and base styles */
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    min-height: 100vh;
-    background-color: rgb(249, 250, 251);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
+  background-color: rgb(249, 250, 251);
+  color: #111827;
+  overflow-x: hidden;
 }
 
-/* Navigation styles */
+/* ----------------- NAVIGATION ----------------- */
 nav {
-    background-color: white;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    padding: 1rem;
-    position: fixed;  /* Make it fixed at the top */
-    top: 0;
-    width: 100%;
-    z-index: 10;  /* Ensure it's on top of other content */
+  background-color: white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
 .navbar ul {
-    display: flex; /* Align items horizontally */
-    justify-content: flex-end; /* Push items to the right */
-    list-style: none; /* Remove default bullet points */
-}
-
-.navbar li {
-    margin: 0 1rem; /* Add space between each item */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .navbar a {
-    color: #374151;
-    text-decoration: none;
-    font-size: 1.125rem;
-    transition: color 0.2s;
+  color: #374151;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
 .navbar a:hover {
-    color: #111827;
+  color: #111827;
 }
 
-/* Hero section styles */
+/* ----------------- HERO SECTION ----------------- */
 main {
-    max-width: 90vw;
-    margin: 0 auto;
-    padding: 5rem 1rem;
+  max-width: 90vw;
+  margin: 0 auto;
+  padding: 8rem 1rem 4rem; /* add top padding to avoid overlap with fixed nav */
 }
 
 .hero-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .greeting {
-    font-size: 2.25rem;
-    font-weight: 300;
-    margin-bottom: 1rem;
+  font-size: 2.25rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 .name {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #2563eb;
-    margin-bottom: 1rem;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1rem;
 }
 
 .tagline {
-    font-size: 1.25rem;
-    color: #4b5563;
-    margin-bottom: 2rem;
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
 }
 
 .hire-button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-bottom: 2rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
 }
 
 .hire-button:hover {
-    background-color: #1d4ed8;
+  background-color: #1d4ed8;
 }
 
+/* Social links */
 .social-links {
-    display: flex;
-    gap: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .social-links a {
-    color: #4b5563;
-    transition: color 0.2s;
+  color: #4b5563;
+  transition: color 0.2s;
 }
 
 .social-links a:hover {
-    color: #111827;
+  color: #111827;
 }
 
+/* Profile image */
 .profile-image {
-    height: 500px;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 .profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-links {
-        gap: 1rem;
-    }
-
-    .greeting {
-        font-size: 1.875rem;
-    }
-
-    .name {
-        font-size: 2.5rem;
-    }
-
-    .title {
-        font-size: 1.5rem;
-    }
-}
-html {
-    scroll-behavior: smooth;
-}
-
+/* ----------------- GENERAL SECTIONS ----------------- */
 .section {
-    padding: 3rem 1rem;
-    margin-top: 2rem;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 #contact {
-    background-color: lightgrey;
-} 
+  background-color: lightgrey;
+}
 
 a {
-    display: inline-block;
+  display: inline-block;
 }
-/* Apply flexbox to the parent container */
+
+/* ----------------- CONTACT SECTION ----------------- */
 .contact-info {
-    display: flex;
-    justify-content: flex-end;  /* Aligns everything to the far right */
-    align-items: center;  /* Vertically centers the items */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .connect {
-    display: flex;
-    align-items: center;  /* Vertically centers the "Connect" text and the icon */
+  display: flex;
+  align-items: center;
 }
 
 .connect a {
-    margin-left: 10px;  /* Adds some space between the "Connect" text and the GitHub icon */
+  margin-left: 10px;
 }
 
+/* ----------------- HERO IMAGE (alternative img) ----------------- */
 .hero-image {
   width: 100%;
-  height: 400px;           /* Set to your preferred height */
-  object-fit: cover;       /* Ensures it fills container without stretching */
+  height: 400px;
+  object-fit: cover;
   border-radius: 16px;
 }
 
+/* ----------------- RESPONSIVENESS ----------------- */
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .profile-image {
+    height: 350px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .navbar ul {
+    justify-content: center;
+  }
+}
+
+/* Large phones and small tablets */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    background-color: white;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .greeting {
+    font-size: 1.875rem;
+  }
+
+  .name {
+    font-size: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .profile-image {
+    height: 300px;
+  }
+
+  main {
+    padding-top: 7rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .navbar ul {
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  .greeting {
+    font-size: 1.5rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .hire-button {
+    width: 100%;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
