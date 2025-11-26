@@ -53,7 +53,7 @@ nav {
 main {
   max-width: 90vw;
   margin: 0 auto;
-  padding: 8rem 1rem 4rem; /* add top padding to avoid overlap with fixed nav */
+  padding: 8rem 1rem 4rem;
 }
 
 .hero-container {
@@ -78,6 +78,7 @@ main {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .title {
@@ -91,6 +92,7 @@ main {
   font-size: 1.25rem;
   color: #4b5563;
   margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hire-button {
@@ -107,6 +109,7 @@ main {
   text-decoration: none;
   text-align: center;
   display: inline-block;
+  max-width: fit-content;
 }
 
 .hire-button:hover {
@@ -199,7 +202,7 @@ a {
 
   .profile-image {
     height: 350px;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0 auto;
   }
 
@@ -210,55 +213,89 @@ a {
 
 /* Large phones and small tablets */
 @media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+  }
+
   .navbar ul {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-    background-color: white;
-  }
-
-  .hero-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .greeting {
-    font-size: 1.875rem;
-  }
-
-  .name {
-    font-size: 2.5rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .profile-image {
-    height: 300px;
-  }
-
-  main {
-    padding-top: 7rem;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .navbar ul {
-    gap: 0.5rem;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .navbar a {
     font-size: 1rem;
   }
 
+  main {
+    max-width: 95vw;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .greeting {
+    font-size: 1.75rem;
+  }
+
+  .name {
+    font-size: 2.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 1.125rem;
+  }
+
+  .profile-image {
+    height: 300px;
+    max-width: 300px;
+  }
+
+  .hire-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Small phones (Galaxy Fold: 344px and similar) */
+@media (max-width: 480px) {
+  nav {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .navbar ul {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .navbar a {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  main {
+    max-width: 100vw;
+    padding: 5rem 0.75rem 2rem;
+  }
+
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+
   .greeting {
     font-size: 1.5rem;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    word-wrap: break-word;
   }
 
   .title {
@@ -267,13 +304,52 @@ a {
 
   .tagline {
     font-size: 1rem;
+    line-height: 1.5;
   }
 
   .hire-button {
     width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
   }
 
   .social-links {
     justify-content: center;
+    gap: 1rem;
+  }
+
+  .profile-image {
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 2rem 0.75rem;
+  }
+}
+
+/* Extra small devices (Galaxy Fold folded: 280px) */
+@media (max-width: 360px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 1.25rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+
+  main {
+    padding-top: 12rem; /* More space for vertical nav */
   }
 }
