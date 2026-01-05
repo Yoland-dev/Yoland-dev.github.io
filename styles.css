@@ -126,10 +126,18 @@ main {
 .social-links a {
   color: #4b5563;
   transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-links a:hover {
   color: #111827;
+}
+
+.social-links svg {
+  width: 24px;
+  height: 24px;
 }
 
 /* Profile image */
@@ -154,12 +162,62 @@ main {
   text-align: center;
 }
 
+.section h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.section p {
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
 #contact {
   background-color: lightgrey;
 }
 
 a {
   display: inline-block;
+}
+
+/* ----------------- SKILLS SECTION ----------------- */
+#skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills ul li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#skills ul li figure {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+#skills ul li figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+#skills ul li:first-child figure img {
+  width: 110%;
+  height: 160%;
 }
 
 /* ----------------- CONTACT SECTION ----------------- */
@@ -262,6 +320,19 @@ a {
     width: 100%;
     max-width: 300px;
   }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  /* Skills section adjustments */
+  #skills ul {
+    gap: 30px;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
 }
 
 /* Small phones (Galaxy Fold: 344px and similar) */
@@ -282,7 +353,11 @@ a {
 
   main {
     max-width: 100vw;
-    padding: 5rem 0.75rem 2rem;
+    padding: 6.5rem 0.75rem 2rem;
+  }
+
+  .hero-container {
+    padding-top: 1rem;
   }
 
   .hero-content {
@@ -318,6 +393,11 @@ a {
     gap: 1rem;
   }
 
+  .social-links svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .profile-image {
     height: 250px;
     max-width: 100%;
@@ -325,6 +405,29 @@ a {
 
   .section {
     padding: 2rem 0.75rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Skills section for small phones */
+  #skills ul {
+    gap: 20px;
+  }
+
+  #skills ul li figure {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  #skills ul li:first-child figure img {
+    width: 110% !important;
+    height: 160% !important;
+  }
+
+  #skills ul li strong {
+    font-size: 0.875rem;
   }
 }
 
@@ -351,5 +454,19 @@ a {
 
   main {
     padding-top: 12rem; /* More space for vertical nav */
+  }
+
+  /* Skills for extra small devices */
+  #skills ul {
+    gap: 15px;
+  }
+
+  #skills ul li figure {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  #skills ul li strong {
+    font-size: 0.75rem;
   }
 }
